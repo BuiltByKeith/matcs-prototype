@@ -1,2 +1,4 @@
-import Composer from '../../components/screens/Composer';
-export default function Page() { return <Composer />; }
+import Composer from "../../components/screens/Composer";
+export default function Page() {
+  return <Composer />;
+}

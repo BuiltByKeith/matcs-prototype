@@ -1,2 +1,10 @@
-import ComingSoon from '../../components/ComingSoon';
-export default function Page() { return <ComingSoon title="Account" sub="Profile, password, and personal preferences." icon="user" />; }
+import ComingSoon from "../../components/ComingSoon";
+export default function Page() {
+  return (
+    <ComingSoon
+      title="Account"
+      sub="Profile, password, and personal preferences."
+      icon="user"
+    />
+  );
+}
