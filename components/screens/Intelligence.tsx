@@ -1,8 +1,10 @@
 'use client';
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import Icon from '../Icon';
 
 function Sparkline({ data, color = 'var(--primary)', filled = true }: { data: number[]; color?: string; filled?: boolean }) {
+  const id = useId();
+  const gradientId = `${id}-gradient`;
   const w = 120, h = 32;
   const max = Math.max(...data), min = Math.min(...data);
   const range = max - min || 1;
@@ -12,16 +14,15 @@ function Sparkline({ data, color = 'var(--primary)', filled = true }: { data: nu
     return `${x},${y}`;
   }).join(' ');
   const area = `0,${h} ${points} ${w},${h}`;
-  const id = `g-${Math.random().toString(36).slice(2, 8)}`;
   return (
     <svg width="100%" height={h} viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none">
       <defs>
-        <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={color} stopOpacity="0.3" />
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
-      {filled && <polygon points={area} fill={`url(#${id})`} />}
+      {filled && <polygon points={area} fill={`url(#${gradientId})`} />}
       <polyline points={points} fill="none" stroke={color} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
