@@ -128,9 +128,8 @@ export default function Sidebar({ current }: { current: string }) {
               <Icon name="bolt" />
             </div>
             <div className="sb-brand-info">
-              <div className="sb-brand-name">BrandPulse</div>
-              <div className="sb-brand-status">
-                <span className="status-dot" /> Online
+              <div className="sb-brand-name" style={{ fontSize: 24 }}>
+                BrandPulse
               </div>
             </div>
             <button className="sb-collapse" aria-label="Collapse sidebar">

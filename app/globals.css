@@ -304,7 +304,7 @@ a {
 }
 .sb-brand-name {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 24px;
   letter-spacing: -0.015em;
   color: var(--text);
   line-height: 1.15;
@@ -956,7 +956,9 @@ a {
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: background .15s, color .15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .create-menu-item:hover {
   background: var(--surface-soft);

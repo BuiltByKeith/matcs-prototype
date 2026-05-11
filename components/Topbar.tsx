@@ -103,19 +103,19 @@ export default function Topbar({
                 </span>
                 Social media content <Icon name="plus" />
               </button>
-              <button type="button" className="create-menu-item">
+              <button type="button" className="create-menu-item" disabled>
                 <span className="create-menu-item-icon">
                   <Icon name="mail" />
                 </span>
                 Email templates <Icon name="plus" />
               </button>
-              <button type="button" className="create-menu-item">
+              <button type="button" className="create-menu-item" disabled>
                 <span className="create-menu-item-icon">
                   <Icon name="notes" />
                 </span>
                 Notes <Icon name="plus" />
               </button>
-              <button type="button" className="create-menu-item">
+              <button type="button" className="create-menu-item" disabled>
                 <span className="create-menu-item-icon">
                   <Icon name="project" />
                 </span>
