@@ -10,6 +10,7 @@ const PATHS: Record<string, React.ReactNode> = {
   plus: <><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></>,
   sidebar: <><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="9" y1="3" x2="9" y2="21" /></>,
   chart: <><polyline points="3 17 9 11 13 15 21 7" /><polyline points="21 7 21 13 15 13" /></>,
+  dashboard: <><rect x="3" y="3" width="8" height="10" rx="1.5" /><rect x="13" y="3" width="8" height="6" rx="1.5" /><rect x="3" y="15" width="8" height="6" rx="1.5" /><rect x="13" y="11" width="8" height="10" rx="1.5" /></>,
   feed: <><path d="M4 4h12a4 4 0 014 4v12H8a4 4 0 01-4-4V4z" /><circle cx="9" cy="13" r="1" /><circle cx="14" cy="13" r="1" /></>,
   mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><polyline points="3 7 12 13 21 7" /></>,
   notes: <><path d="M9 4h8a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V8l4-4z" /><polyline points="9 4 9 8 5 8" /></>,

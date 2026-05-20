@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Notes from "../../components/screens/Notes";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="BrandPulse Notes"
-      sub="Shared notes, decisions, and meeting minutes — searchable across your team."
-      icon="notes"
-    />
-  );
+  return <Notes />;
 }

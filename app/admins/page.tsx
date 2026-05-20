@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Admins from "../../components/screens/Admins";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Super Admins"
-      sub="Workspace administration and elevated permissions."
-      icon="shield"
-    />
-  );
+  return <Admins />;
 }

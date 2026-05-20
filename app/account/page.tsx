@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Account from "../../components/screens/Account";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Account"
-      sub="Profile, password, and personal preferences."
-      icon="user"
-    />
-  );
+  return <Account />;
 }

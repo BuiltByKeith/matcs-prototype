@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import ZohoIntegration from "../../components/screens/ZohoIntegration";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Zoho CRM"
-      sub="Account, contact, and revenue sync — your single source of truth."
-      icon="zoho"
-    />
-  );
+  return <ZohoIntegration />;
 }

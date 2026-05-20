@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Broadcast from "../../components/screens/Broadcast";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Feature Broadcasts"
-      sub="Release notes, roadmap teasers, and what's shipping next."
-      icon="broadcast"
-    />
-  );
+  return <Broadcast />;
 }

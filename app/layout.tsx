@@ -3,7 +3,7 @@ import "./globals.css";
 import Shell from "../components/Shell";
 
 export const metadata = {
-  title: "BrandPulse — Marketing Automation, Reimagined",
+  title: "Prism",
   description:
     "Collaborative Content Management & Social Media Workflow Platform",
 };

@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Feedback from "../../components/screens/Feedback";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Submit Feedback"
-      sub="Tell us what's working and what isn't — every note reaches the team."
-      icon="feedback"
-    />
-  );
+  return <Feedback />;
 }

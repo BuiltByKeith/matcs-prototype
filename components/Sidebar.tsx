@@ -13,7 +13,16 @@ type NavItem = {
 };
 
 const NAV: { discover: NavItem[]; integrations: NavItem[]; menu: NavItem[] } = {
+  
   discover: [
+
+    {
+      id: "dashboard",
+      href: "/dashboard",
+      label: "Dashboard",
+      icon: "chart",
+      badge: { kind: "alpha", text: "Alpha" },
+    },
     {
       id: "intelligence",
       href: "/intelligence",
@@ -35,7 +44,7 @@ const NAV: { discover: NavItem[]; integrations: NavItem[]; menu: NavItem[] } = {
       icon: "mail",
       badge: { kind: "new", text: "New" },
     },
-    { id: "notes", href: "/notes", label: "BrandPulse Notes", icon: "notes" },
+    { id: "notes", href: "/notes", label: "Prism Notes", icon: "notes" },
     {
       id: "projects",
       href: "/projects",
@@ -116,7 +125,7 @@ export default function Sidebar({ current }: { current: string }) {
   }, [menuOpen]);
 
   const isActive = (href: string) =>
-    current === href || (href === "/intelligence" && current === "/");
+    current === href || (href === "/dashboard" && current === "/");
 
   return (
     <aside className="sidebar">
@@ -129,7 +138,7 @@ export default function Sidebar({ current }: { current: string }) {
             </div>
             <div className="sb-brand-info">
               <div className="sb-brand-name" style={{ fontSize: 24 }}>
-                BrandPulse
+                Prism
               </div>
             </div>
             <button className="sb-collapse" aria-label="Collapse sidebar">
@@ -228,7 +237,7 @@ export default function Sidebar({ current }: { current: string }) {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    aradillos@cloudshift.net
+                    allen.aradillos@cloudshift.net
                   </div>
                 </div>
               </div>
@@ -251,15 +260,7 @@ export default function Sidebar({ current }: { current: string }) {
               >
                 <Icon name="settings" /> <span>Settings</span>
               </button>
-              <button
-                className="sb-popover-item"
-                onClick={() => {
-                  router.push("/helpdesk");
-                  setMenuOpen(false);
-                }}
-              >
-                <Icon name="help" /> <span>Helpdesk</span>
-              </button>
+
               <div className="sb-popover-sep" />
               <button className="sb-popover-item danger">
                 <Icon name="logout" /> <span>Logout</span>

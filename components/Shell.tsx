@@ -3,13 +3,15 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState, type ReactNode } from 'react';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import { getProject } from '../data/projectsMock';
 
 const CRUMBS: Record<string, string[]> = {
-  '/':            ['Discover', 'BP Intelligence'],
+  '/':            ['Discover', 'Dashboard'],
+  '/dashboard':   ['Discover', 'Dashboard'],
   '/intelligence':['Discover', 'BP Intelligence'],
   '/social':      ['Discover', 'Social Media Contents'],
   '/email':       ['Discover', 'Email Templates'],
-  '/notes':       ['Discover', 'BrandPulse Notes'],
+  '/notes':       ['Discover', 'Prism Notes'],
   '/projects':    ['Discover', 'Project Management'],
   '/faq':         ['Discover', 'FAQs & Announcements'],
   '/tools':       ['Discover', 'Tools & Resources'],
@@ -41,9 +43,17 @@ export default function Shell({ children }: { children: ReactNode }) {
     try { localStorage.setItem('bp-theme', theme); } catch {}
   }, [theme]);
 
-  const crumbs = CRUMBS[pathname] || ['BrandPulse'];
-  // Map composer back to social for sidebar highlight
-  const sidebarPath = pathname === '/composer' ? '/social' : pathname;
+  const projectMatch = pathname.match(/^\/projects\/([^/]+)$/);
+  const project = projectMatch ? getProject(projectMatch[1]) : undefined;
+  const crumbs = project
+    ? ['Discover', 'Project Management', project.title]
+    : CRUMBS[pathname] || ['BrandPulse'];
+  const sidebarPath =
+    pathname === '/composer'
+      ? '/social'
+      : pathname.startsWith('/projects')
+        ? '/projects'
+        : pathname;
 
   const onCompose = () => router.push('/composer');
 

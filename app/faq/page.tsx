@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Faq from "../../components/screens/Faq";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="FAQs & Announcements"
-      sub="Internal knowledge base and team announcements in one place."
-      icon="faq"
-    />
-  );
+  return <Faq />;
 }

@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Tools from "../../components/screens/Tools";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Tools & Resources"
-      sub="Brand assets, links, and templates for your team."
-      icon="tools"
-    />
-  );
+  return <Tools />;
 }

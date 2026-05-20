@@ -1,10 +1,4 @@
-import ComingSoon from "../../components/ComingSoon";
+import Settings from "../../components/screens/Settings";
 export default function Page() {
-  return (
-    <ComingSoon
-      title="Settings"
-      sub="Workspace, branding, integrations, and notifications."
-      icon="settings"
-    />
-  );
+  return <Settings />;
 }

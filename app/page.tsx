@@ -1,4 +1,4 @@
-import Intelligence from "../components/screens/Intelligence";
+import Dashboard from "@/components/screens/Dashboard";
 export default function Home() {
-  return <Intelligence />;
+  return <Dashboard />;
 }
